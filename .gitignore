@@ -1,0 +1,16 @@
+### Python template
+__pycache__/
+*.py[cod]
+
+# db
+db.sqlite3
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+.idea
+
+*.sublime-workspace
+*.sublime-project
