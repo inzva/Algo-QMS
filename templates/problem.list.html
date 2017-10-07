@@ -1,5 +1,30 @@
 {% extends 'layout.html' %}
-
-{% block content %}
-    {{ problems }}
+<html>
+  <head>
+  </head>
+  <body>
+    {% block content %}
+      <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Problem</th>
+        <th>Memory Limit</th>
+        <th>Time Limit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for problem in problems%}
+      <tr>
+        <th scope="row">{{ problem.id }}</th>
+        <td><a href="{% url 'ProblemDetail' problem.id %}">{{ problem.statement }}</a></td>
+        <td>{{ problem.memory_limit }}</td>
+        <td>{{ problem.time_limit }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 {% endblock %}
+
+  </body>
+</html>
