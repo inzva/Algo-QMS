@@ -20,6 +20,6 @@ from main.views import ProblemList, ProblemDetail
 
 urlpatterns = [
     url(r'^$', ProblemList.as_view()),
-    url(r'^(?P<slug>[-\d]+)/$', ProblemDetail.as_view()),
+    url(r'^(?P<pk>[-\d]+)/$', ProblemDetail.as_view(), name='ProblemDetail'),
     url(r'^admin/', admin.site.urls),
 ]

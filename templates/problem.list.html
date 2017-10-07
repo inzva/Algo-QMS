@@ -17,7 +17,7 @@
       {% for problem in problems%}
       <tr>
         <th scope="row">{{ problem.id }}</th>
-        <td>{{ problem.statement }}</td>
+        <td><a href="{% url 'ProblemDetail' problem.id %}">{{ problem.statement }}</a></td>
         <td>{{ problem.memory_limit }}</td>
         <td>{{ problem.time_limit }}</td>
       </tr>
