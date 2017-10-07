@@ -17,6 +17,9 @@ class TestCase(models.Model):
     output = models.CharField(max_length=100)
     score = models.PositiveIntegerField()
 
+    def __str__(self):
+        return self.input
+
 
 class Submission(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
