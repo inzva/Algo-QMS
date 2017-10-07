@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"/>
+{% endblock %}
+
+{% block navbar %}
+    {# destroy #}
+{% endblock %}
+
+
+{% block content %}
+    <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">Please sign in</h2>
+
+        <label for="username" class="sr-only">Email address</label>
+        <input type="text" id="username" name="username" class="form-control{% if form.username.errors %} is-invalid{% endif %}" placeholder="Username"
+               autofocus>
+        {% if form.username.errors %}
+            <div class="invalid-feedback">
+            {% for error in form.username.errors %}
+                  {{ error }}
+            {% endfor %}
+            </div>
+        {% endif %}
+
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control{% if form.password.errors %} is-invalid{% endif %}" placeholder="Password">
+        {% if form.password.errors %}
+            <div class="invalid-feedback">
+            {% for error in form.password.errors %}
+                  {{ error }}
+            {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if form.non_field_errors %}
+            {% for error in form.non_field_errors %}
+                {{ error }}
+            {% endfor %}
+        {% endif %}
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        {% csrf_token %}
+    </form>
+{% endblock %}

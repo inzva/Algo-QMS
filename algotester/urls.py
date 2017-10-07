@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
 
-from main.views import ProblemList, ProblemDetail
+from main.views import ProblemList, ProblemDetail, SubmissionList, SubmissionDetail
 
 urlpatterns = [
     url(r'^$', ProblemList.as_view()),
     url(r'^(?P<pk>[-\d]+)/$', ProblemDetail.as_view(), name='ProblemDetail'),
+    url(r'^login', auth_views.LoginView.as_view(), name='login'),
+    url(r'^logout', auth_views.LoginView.as_view(), name='logout'),
+    url(r'^submissions', SubmissionList.as_view()),
+    url(r'^submissions/(?P<pk>[-\d]+)/$', SubmissionDetail.as_view()),
     url(r'^admin/', admin.site.urls),
 ]
