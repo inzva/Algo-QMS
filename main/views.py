@@ -1,3 +1,16 @@
-from django.shortcuts import render
+from django.views.generic import DetailView, ListView
 
-# Create your views here.
+from main.models import Problem
+
+
+class ProblemList(ListView):
+    model = Problem
+    context_object_name = 'problems'
+    template_name = 'problem.list.html'
+
+
+class ProblemDetail(ListView):
+    model = Problem
+    context_object_name = 'problem'
+    template_name = 'problem.detail.html'
+

@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from main.views import ProblemList, ProblemDetail
+
 urlpatterns = [
+    url(r'^$', ProblemList.as_view()),
+    url(r'^(?P<slug>[-\d]+)/$', ProblemDetail.as_view()),
     url(r'^admin/', admin.site.urls),
 ]
