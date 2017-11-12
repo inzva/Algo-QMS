@@ -2,7 +2,7 @@ import random
 random.seed()
 
 
-def judge(file_path, question, numberOfTestCases, scores):
+def judge(file_path, question):
     runTimeErrors = []
     timeLimitErrors = []
     correctAnswers = []
@@ -12,7 +12,7 @@ def judge(file_path, question, numberOfTestCases, scores):
     for i in range(numberOfTestCases):
         b = random.randint(0, 4)
         if(b == 0):
-            runTimeErrorsErrors.append(0)
+            runTimeErrors.append(0)
             timeLimitErrors.append(0)
             correctAnswers.append(1)
             wrongAnswers.append(0)
@@ -33,5 +33,5 @@ def judge(file_path, question, numberOfTestCases, scores):
             correctAnswers.append(0)
             wrongAnswers.append(0)
     return parameters = {"runTimeErrors": runTimeErrors,
-                         "timeLimitErrors": self.timeLimitErrors, "correctAnswers": self.correctAnswers,
-                         "wrongAnswers": self.wrongAnswers, "runningTimes": self.runningTimes, "score": self.score}
+                         "timeLimitErrors": timeLimitErrors, "correctAnswers": correctAnswers,
+                         "wrongAnswers": wrongAnswers, "runningTimes": runningTimes, "score": score}
