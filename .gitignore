@@ -15,3 +15,5 @@ ENV/
 *.sublime-workspace
 *.sublime-project
 .DS_Store
+
+Problems/
