@@ -1,0 +1,5 @@
+1)Add submissions kısmında soruyu seçmeden testcaseler seçiliyor ve soruya göre özelleşmiyor farklı soruya farklı testt casei
+doğruymuş gibi submit etmek mümkün
+2)404 sayfaları özelleşmemiş direk kodu önüme döküyor
+3)Eklenmiş user login yapamıyor 404 sayfası veriyor
+4) Send an answer kısmı var problem detailde neden var anlamadım ayrıca bişi yollayınca Nameerror veriyor.
