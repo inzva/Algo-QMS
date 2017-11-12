@@ -3,32 +3,35 @@ random.seed()
 
 
 def judge(file_path, question, numberOfTestCases, scores):
-    runtime = []
-    timelimit = []
-    correct = []
-    wrong = []
+    runTimeErrors = []
+    timeLimitErrors = []
+    correctAnswers = []
+    wrongAnswers = []
+    runningTimes = []
     score = 0
     for i in range(numberOfTestCases):
         b = random.randint(0, 4)
         if(b == 0):
-            runtime.append(0)
-            timelimit.append(0)
-            correct.append(1)
-            wrong.append(0)
+            runTimeErrorsErrors.append(0)
+            timeLimitErrors.append(0)
+            correctAnswers.append(1)
+            wrongAnswers.append(0)
         elif(b == 1):
-            runtime.append(0)
-            timelimit.append(0)
-            correct.append(0)
-            wrong.append(1)
+            runTimeErrors.append(0)
+            timeLimitErrors.append(0)
+            correctAnswers.append(0)
+            wrongAnswers.append(1)
             score += scores[i]
         elif(b == 2):
-            runtime.append(1)
-            timelimit.append(0)
-            correct.append(0)
-            wrong.append(0)
+            runTimeErrors.append(1)
+            timeLimitErrors.append(0)
+            correctAnswers.append(0)
+            wrongAnswers.append(0)
         elif(b == 3):
-            runtime.append(0)
-            timelimit.append(1)
-            correct.append(0)
-            wrong.append(0)
-    return runTimeErrors, timeLimitErrors, correctAnswers, wrongAnswers, runningTimes, score
+            runTimeErrors.append(0)
+            timeLimitErrors.append(1)
+            correctAnswers.append(0)
+            wrongAnswers.append(0)
+    return parameters = {"runTimeErrors": runTimeErrors,
+                         "timeLimitErrors": self.timeLimitErrors, "correctAnswers": self.correctAnswers,
+                         "wrongAnswers": self.wrongAnswers, "runningTimes": self.runningTimes, "score": self.score}
