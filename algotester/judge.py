@@ -5,6 +5,7 @@ def judge(file_path,question,numberOfTestCases,scores):
     timelimit=[]
     correct=[]
     wrong=[]
+    score=0
     for i in range(numberOfTestCases):
         b = random.randint(0,4)
         if(b==0):
@@ -17,6 +18,7 @@ def judge(file_path,question,numberOfTestCases,scores):
             timelimit.append(0)
             correct.append(0)
             wrong.append(1)
+            score+=scores[i]
         elif(b==2):
             runtime.append(1)
             timelimit.append(0)
@@ -27,4 +29,4 @@ def judge(file_path,question,numberOfTestCases,scores):
             timelimit.append(1)
             correct.append(0)
             wrong.append(0)
-    return runtime,timelimit,correct,wrong
+    return runtime,timelimit,correct,wrong,score
