@@ -1,6 +1,6 @@
-#Algotester
+# Algo-QMS
 
-##How to start project
+## How to start project
 First of all check your local django version with:
 ```bash
 django-admin.py version
@@ -11,10 +11,8 @@ pip install --pre django
 ```
 To clone and run project, execute these commands:
 ```bash
-git clone https://github.com/inzva/algotester.git
-cd algotester
+git clone https://github.com/inzva/Algo-QMS.git
+cd Algo-QMS
 python3 manage.py migrate
 python3 manage.py runserver
 ```
-
-
